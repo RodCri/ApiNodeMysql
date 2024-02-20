@@ -7,7 +7,9 @@ import { pingRoute } from './routes/ping.routes.js';
 
 const app = express();
 
-app.use(routerTeacher);
+app.use(express.json())
+
+app.use('/api',routerTeacher);
 app.use(pingRoute);
 
 app.listen(5000)
