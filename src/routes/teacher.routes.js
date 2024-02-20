@@ -6,5 +6,8 @@ export const routerTeacher = Router();
 routerTeacher.get('/teacher', getTeachers );
 routerTeacher.get('/teacher/:id', getTeacher);
 routerTeacher.post('/teacher', addTeacher);
-routerTeacher.put('/teacher', updateTeacher);
+// Actualiza todo
+routerTeacher.put('/teacher/:id', updateTeacher);
+// Actualiza lo que necesita
+routerTeacher.patch('/teacher/:id', updateTeacher);
 routerTeacher.delete('/teacher/:id', deleteTeacher);
