@@ -1,9 +1,10 @@
 import { Router } from "express";
-import { getTeachers, addTeacher, deleteTeacher, updateTeacher } from "../controllers/teacher.controller.js";
+import { getTeachers, addTeacher, deleteTeacher, updateTeacher,getTeacher } from "../controllers/teacher.controller.js";
 export const routerTeacher = Router();
 
 // Creando los endPoints
 routerTeacher.get('/teacher', getTeachers );
+routerTeacher.get('/teacher/:id', getTeacher);
 routerTeacher.post('/teacher', addTeacher);
 routerTeacher.put('/teacher', updateTeacher);
-routerTeacher.delete('/teacher', deleteTeacher);
+routerTeacher.delete('/teacher/:id', deleteTeacher);
